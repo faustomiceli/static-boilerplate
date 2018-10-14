@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="25px" viewBox="0 0 16 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="freccia_nera" transform="translate(-15.000000, -12.000000)" stroke="#ABABAB">
+            <g id="freccia_cerchio" transform="translate(25.000000, 25.000000) scale(-1, 1) rotate(-180.000000) translate(-25.000000, -25.000000) ">
+                <polygon id="Path-4" transform="translate(22.289172, 25.435000) rotate(180.000000) translate(-22.289172, -25.435000) " points="15 14 29.5783436 25.4350004 15 36.8700008"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

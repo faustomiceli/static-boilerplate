@@ -1,0 +1,78 @@
+include utils.pug
+
+doctype html
+block vars
+
+- var locHost = common.host + '/' + data.lang;
+- var seoTitle = data[page].seoTitle ? stripHtml(data[page].seoTitle) : stripHtml(data.home.seoTitle);
+- var seoDescription = data[page].seoDescription ? stripHtml(data[page].seoDescription) : '';
+- var canonical = common.host + '/it/' + pageUrl_IT;
+- var alternate = common.host + '/en/' + pageUrl_EN;
+- if (data.lang == 'en')
+  - canonical = common.host + '/en/' + pageUrl_EN;
+  - alternate = common.host + '/it/' + pageUrl_IT;
+
+
+html(lang = data.lang, class = page)
+  head
+    meta(charset='UTF-8')
+    title #{seoTitle}
+
+    - if (data[page].seoDescription)
+      meta(name='description', content = seoDescription)
+
+    meta(name='viewport', content='user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no')
+    meta(name='google', content='notranslate')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    link(rel='canonical', href = canonical)
+    link(rel='alternate' href = alternate)
+    link(rel='dns-prefetch', href='//fonts.googleapis.com')
+
+    meta(property='og:type', content='website')
+    meta(property='og:url', content = canonical)
+    meta(property='og:title', content = seoTitle)
+    meta(property='og:image', content = pageImage ? pageImage : '')
+    meta(property='og:description', content = seoDescription)
+    meta(property='og:site_name', content = common.siteName)
+    meta(property='og:locale', content = data.locale)
+
+    meta(property='twitter:card', content = 'summary')
+    meta(property='twitter:site', content = '@')
+    meta(property='twitter:url', content = canonical)
+    meta(property='twitter:title', content = seoTitle)
+    meta(property='twitter:description', content = seoDescription)
+    meta(property='twitter:image', content = pageImage ? pageImage : '')
+
+    link(rel='manifest', href = common.host + '/manifest.json')
+    meta(name='mobile-web-app-capable', content = 'yes')
+    meta(name='application-name', content = common.siteName)
+    meta(name='theme-color', content = '#000000')
+
+    link(rel='icon', type='image/x-icon', href = common.host + '/images/icon/favicon.ico')
+    link(rel='icon', type='image/png', sizes='192x192', href = common.host + '/images/icon/touch-icon.png')
+    link(rel='apple-touch-icon', href = common.host + '/images/icon/touch-icon.png')
+    link(rel='mask-icon', href = common.host + '/images/icon/favicon.svg', color='#FFFFFF')
+
+    block styles
+      link(href='https://fonts.googleapis.com/css?family=Heebo:400,500,700|Libre+Franklin:300,400,500,700', rel='stylesheet')
+      link(href='/styles/main.css', rel='stylesheet')
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    script(src='https://www.googletagmanager.com/gtag/js?id=[ANALYTICS-ID]', async)
+    script
+      | window.dataLayer = window.dataLayer || [];
+      | function gtag(){dataLayer.push(arguments);}
+      | gtag('js', new Date());
+      | gtag('config', '[ANALYTICS-ID]');
+
+
+  body(itemscope, itemtype='http://schema.org/WebPage', class = classpage)
+    include header.pug
+
+    block content
+
+    include footer.pug
+
+    block scripts
+      script(src = '/scripts/main.js')

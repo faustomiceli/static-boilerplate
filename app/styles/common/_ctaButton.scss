@@ -1,0 +1,41 @@
+.ctaButton {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  min-height: 60px;
+  border-radius: 2px;
+  color: $color-page-bg;
+  padding: #{$content-padding / 3} #{$content-padding / 2};
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  background-color: rgba($color-bg, 0.7);
+  @include transition(background-color $timing-ctaHover ease, color $timing-ctaHover ease);
+
+  @include tablet {
+    width: auto;
+    font-size: 14px;
+  }
+
+  &:visited,
+  &:active {
+    color: $color-page-bg;
+  }
+
+  &:hover,
+  &.active {
+    text-decoration: none;
+    background-color: rgba($color-bg, 0.95);
+    color: $color-page-bg;
+  }
+
+  &--small {
+    min-width: 180px;
+  }
+}

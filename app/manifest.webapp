@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "FaustoMiceli.me",
+  "launch_path": "/it",
+  "description": "",
+  "icons": {
+    "128": "/images/icon/touch-icon.png"
+  },
+  "developer": {
+    "name": "",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "it",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "FaustoMiceli.me",
+      "description": ""
+    }
+  }
+}

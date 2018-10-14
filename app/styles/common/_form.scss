@@ -1,0 +1,53 @@
+input,
+label,
+select,
+textarea {
+	margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+
+  font-family: $font-primary;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: $color-text;
+  background: $color-page-bg;
+}
+
+input,
+textarea {
+  border: 1px solid $color-bg;
+  border-radius: 4px;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+textarea {
+	vertical-align:top;
+	overflow:auto;
+}
+
+input {
+  &[type='checkbox'] {
+    //-webkit-appearance: none;
+  }
+
+  &[type='submit'] {
+    background: $color-text;
+    color: $color-page-bg;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba($color-text, 0.8);
+    }
+  }
+}

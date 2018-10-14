@@ -1,0 +1,29 @@
+.partial {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
+
+  @include tablet {
+    background: $color-media-bg;
+  }
+
+  @include desktop {
+    justify-content: space-between;
+  }
+
+  &--modifier {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: transparent !important;
+  }
+
+  &__block {
+    width: 100%;
+
+    &--half {
+      width: 100%;
+    }
+  }
+}

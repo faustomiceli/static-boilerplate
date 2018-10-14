@@ -1,0 +1,45 @@
+// Tablet
+// ---------------------
+@mixin tablet {
+  @include min-screen(768px) {
+    @content;
+  }
+};
+
+@mixin tabletDown {
+  @include max-screen(767px) {
+    @content;
+  }
+};
+
+// Min content
+// ---------------------
+@mixin desktopMinContent {
+  @include min-screen($content-width) {
+    @content;
+  }
+};
+
+// Desktop
+// ---------------------
+@mixin desktop {
+  @include min-screen(1024px) {
+    @content;
+  }
+};
+
+// Desktop
+// ---------------------
+@mixin desktopDown {
+  @include max-screen(1023px) {
+    @content;
+  }
+};
+
+// ExtraLarge - todo
+// ---------------------
+@mixin desktopXl {
+  @include min-screen(1200px) {
+    @content;
+  }
+};

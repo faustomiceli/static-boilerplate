@@ -1,0 +1,24 @@
+- function stripHtml(string) {return string.replace(/(<([^>]+)>)/ig,"")}
+
+mixin renderImage(img, sizes = "100w", lazyLoad = true)
+  - var srcset = img + ' 1441w, ' + img.replace('.', '-med.') + ' 1024w, ' + img.replace('.', '-low.') + ' 640w';
+  - var src = img.replace('.', '-med.')
+  - if (lazyLoad) {
+      img(
+        data-sizes = sizes,
+        data-srcset = srcset,
+        data-src = src,
+        class!=attributes.alt,
+        class!=attributes.class
+      )
+  - } else {
+      img(
+        sizes = sizes,
+        srcset = srcset,
+        data-src = src,
+        class!=attributes.alt,
+        class!=attributes.class
+      )
+  - }
+
+

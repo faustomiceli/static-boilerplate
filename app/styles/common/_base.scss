@@ -1,0 +1,94 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+
+  text-rendering: optimizeLegibility;
+  -webkit-backface-visibility: hidden;
+
+  -webkit-user-drag: none;
+  -webkit-text-size-adjust: none;
+
+  font-family: $font-primary;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: normal;
+  color: $color-text;
+  background: $color-page-bg;
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+
+  &:visited, &:active {
+    color: $color-text;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: $color-text-hover;
+  }
+
+  a:active, a:hover {
+    outline-width: 0;
+  }
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  &[data-src],
+  &[data-srcset] {
+    opacity: 0.001;
+    @include transition(opacity 333ms ease);
+
+    &.loaded {
+      opacity: 1;
+    }
+  }
+
+  &.swiper-lazy {
+    opacity: 0.001;
+    @include transition(opacity 333ms ease);
+
+    &-loaded {
+      opacity: 1;
+    }
+  }
+}
+
+button,
+[role='button'] {
+  font-family: $font-primary;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+sup {
+  font-size: 55%;
+}
+
+p {
+  line-height: 2;
+}
+
+.assistive-text {
+  @include assistive-text;
+}

@@ -1,0 +1,11 @@
+extends ../include/layout.pug
+
+block vars
+  - var data = it
+  - var page = 'home'
+  - var pageUrl_IT = ''
+  - var pageUrl_EN = ''
+  - var pageImage = common.host + '/imagetest.jpg';
+
+block content
+  +renderImage('images/imagetest.jpg')

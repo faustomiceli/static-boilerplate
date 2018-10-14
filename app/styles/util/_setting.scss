@@ -1,0 +1,57 @@
+// Font
+// ---------------------
+$font-primary: 'Libre Franklin', sans-serif;
+$font-secondary: 'Heebo', sans-serif;
+$icon-font-name: 'icon';
+$font-showClasses: true;
+
+// Size
+// ---------------------
+$content-width: 1200px;
+$content-width-small: 800px;
+$content-width-xsmall: 620px;
+$content-padding: 20px;
+
+$header-height: 80px;
+$footer-height: 200px;
+
+// z-index
+// ---------------------
+$zindex-header: 100;
+$zindex-overlay: 90;
+
+// Header
+// ---------------------
+$header-menuOpen: '.menu-isOpen';
+$header-searchOpen: '.search-isOpen';
+
+// Timing
+// ---------------------
+$timing-ctaHover: 333ms;
+$timing-accordion: 444ms;
+$timing-sliderEl: 400ms;
+$timing-headerAnimation: 0.25s;
+
+// Color
+// ---------------------
+$color-text: #131313;
+$color-text-inactive: lighten($color-text, 10%);
+$color-text-hover: darken($color-text, 10%);
+$color-text-overdark: #D6D6D6;
+$color-text-overdark-hover: #FFF;
+$color-card-bg: #F2F2F2;
+$color-page-bg: #FFF;
+$color-bg: #000;
+$color-media-bg: #F5F5F5;
+$color-brand-primary: #005DD8;
+$color-brand-primary-hover: #014094;
+$color-brand-primary-light: #0094FF;
+$color-brand-primary-dark: #014094;
+$color-facebook-primary: #3b5998;
+$color-facebook-secondary: #fff;
+$color-twitter-primary: #00aced;
+$color-twitter-secondary: #fff;
+$color-youtube-primary: #bb0000;
+$color-youtube-secondary: #fff;
+$color-instagram-primary: #125688;
+$color-instagram-secondary: #fff;

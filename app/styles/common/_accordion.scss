@@ -1,0 +1,35 @@
+[data-accordion] {
+  > [data-accordion-button] {
+    outline: 0;
+  }
+
+  > [data-accordion-wrapper] {
+    max-height: 0;
+    @include transition(max-height $timing-accordion ($timing-accordion / 2) ease);
+
+    > * {
+      opacity: 0.001;
+      @include transition(opacity ($timing-accordion / 2) 0s ease);
+    }
+  }
+
+  &.isOpen {
+    > [data-accordion-wrapper] {
+      max-height: 900px;
+      transition-delay: 0s;
+
+      @include desktop {
+        max-height: 700px;
+      }
+
+      > * {
+        opacity: 1;
+        transition-delay: $timing-accordion;
+      }
+    }
+  }
+
+  &.isTransition {
+
+  }
+}

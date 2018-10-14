@@ -1,0 +1,18 @@
+footer.footer
+
+script(type = 'application/ld+json')
+  |{
+  |  "@context": "http://schema.org",
+  |  "@type": "Organization",
+  |  "url": "#{common.host}"",
+  |  "logo": "#{common.host + "/images/icon/touch-icon.png"}",
+  |  "name": "#{common.siteName}",
+  |  "contactPoint": {
+  |    "@type": "ContactPoint",
+  |    "telephone": "+39",
+  |    "contactType": "Customer support"
+  |  },
+  |  "sameAs": [
+  |    "https://www.facebook.com/fausto.miceli/"
+  |  ]
+  |}

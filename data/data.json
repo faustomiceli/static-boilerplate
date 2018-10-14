@@ -1,0 +1,62 @@
+{
+  "common": {
+    "host": "https://www.faustomiceli.me",
+    "siteName": "FaustoMiceli"
+  },
+  "it": {
+    "lang": "it",
+    "locale": "it_IT",
+    "menu": [
+      {
+        "label": "Azienda",
+        "url": "azienda",
+        "submenu": false
+      },
+      {
+        "label": "Prodotti",
+        "url": "",
+        "submenu": "products"
+      },
+      {
+        "label": "Contatti",
+        "url": "contatti",
+        "submenu": false
+      }
+    ],
+    "common": {
+
+    },
+    "home": {
+      "seoTitle": "Titolo",
+      "seoDescription": "Descrizione"
+    }
+  },
+  "en": {
+    "lang": "en",
+    "locale": "en_US",
+    "menu": [
+      {
+        "label": "Company",
+        "url": "company",
+        "submenu": false
+      },
+      {
+        "label": "Products",
+        "url": "",
+        "submenu": "products"
+      },
+      {
+        "label": "Contacts",
+        "url": "contacts",
+        "submenu": false
+      }
+    ],
+    "common": {
+
+    },
+    "home": {
+      "seoTitle": "Title",
+      "seoDescription": "Description"
+    }
+  }
+}
